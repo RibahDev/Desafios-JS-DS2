@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada em Tabela</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Tabuada</h1>
+        <div class="form-group">
+            <input type="number" id="numero" class="form-control" placeholder="Digite um número" />
+        </div>
+        <button class="btn btn-primary" onclick="mostrarTabuada()">Mostrar Tabuada</button>
+        <table class="table table-bordered mt-4" id="tabela"></table>
+    </div>
+
+    <script>
+        function mostrarTabuada() {
+            const numero = document.getElementById('numero').value;
+            const tabela = document.getElementById('tabela');
+            tabela.innerHTML = ''; // Limpa a tabela anterior
+
+            // Adiciona cabeçalho
+            let cabecalho = `<thead><tr><th>Multiplicação</th><th>Resultado</th></tr></thead>`;
+            tabela.innerHTML += cabecalho;
+
+            let corpoTabela = '<tbody>';
+            for (let i = 1; i <= 10; i++) {
+                let resultado = `${i} x ${numero}`;
+                corpoTabela += `<tr><td>${resultado}</td><td>${i * numero}</td></tr>`;
+            }
+            corpoTabela += '</tbody>';
+            tabela.innerHTML += corpoTabela;
+        }
+    </script>
+
+    <!-- Scripts do Bootstrap (opcional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Troca de Fonte</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa; /* Cor de fundo leve */
+        }
+        .container {
+            margin-top: 50px;
+            padding: 30px;
+            background-color: #fff; /* Fundo branco para o container */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #327e00; /* Cor do título */
+        }
+    </style>
+</head>
+<body>
+    <div class="container text-center">
+        <h1 id="fonte">Este é um texto que mudará de fonte!</h1>
+
+        <div class="btn-group-vertical mt-4">
+            <button class="btn btn-outline-success" onclick="document.getElementById('fonte').style.fontFamily='Arial';">Arial</button>
+            <button class="btn btn-outline-success" onclick="document.getElementById('fonte').style.fontFamily='Verdana';">Verdana</button>
+            <button class="btn btn-outline-success" onclick="document.getElementById('fonte').style.fontFamily='Times New Roman';">Times New Roman</button>
+            <button class="btn btn-outline-success" onclick="document.getElementById('fonte').style.fontFamily='Courier New';">Courier New</button>
+            <button class="btn btn-outline-success" onclick="document.getElementById('fonte').style.fontFamily='Georgia';">Georgia</button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

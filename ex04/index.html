@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Tabuada</h1>
+        <div class="form-group">
+            <input type="number" id="numero" class="form-control" placeholder="Digite um número" />
+        </div>
+        <button class="btn btn-primary" onclick="mostrarTabuada()">Mostrar Tabuada</button>
+        <pre id="resultado" class="mt-4"></pre>
+    </div>
+
+    <script>
+        function mostrarTabuada() {
+            const numero = document.getElementById('numero').value;
+            let resultado = '';
+            for (let i = 1; i <= 10; i++) {
+                resultado += `${numero} x ${i} = ${numero * i}\n`;
+            }
+            document.getElementById('resultado').textContent = resultado;
+        }
+    </script>
+</body>
+</html>
